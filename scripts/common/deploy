@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 . ${portz_root}/scripts/defs.sh
 
@@ -10,6 +10,8 @@
 # moving whole directory tree
 
 TAR_FLAGS="--no-overwrite-dir --atime-preserve -m --no-same-owner --no-same-permissions"
+TAR_FLAGS="-m"
+
 (cd ${staging_dir} ; portz_invoke ${TAR} c . ; ) | ( cd / ; portz_invoke ${TAR} xv ${TAR_FLAGS}; )
 
 

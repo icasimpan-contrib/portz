@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #
 # this script unarchives package to some current directory
@@ -16,6 +16,7 @@ portz_unzip()
 } 
 
 TAR_COMMON_OPTIONS="--no-overwrite-dir --atime-preserve -m --no-same-owner --no-same-permissions"
+TAR_COMMON_OPTIONS="-m"
 name=${1}
 case $name in
     *.tar)     portz_invoke_always ${TAR} x ${TAR_COMMON_OPTIONS} -f $name ;;

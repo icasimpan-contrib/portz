@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 . ${portz_root}/scripts/defs.sh
 

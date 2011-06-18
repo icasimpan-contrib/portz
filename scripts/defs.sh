@@ -49,7 +49,7 @@ case "$OSTYPE" in
         PATCH=gpatch
 	MAKE=gmake
         ;;
-    *FreeBSD*)
+    *FreeBSD*|*freebsd*)
 	MAKE=gmake
 	C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/local/include
 	CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/local/include
